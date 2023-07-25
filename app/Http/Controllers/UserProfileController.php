@@ -37,7 +37,7 @@ class UserProfileController extends Controller
         return response()->json([
             'success'=>true,
             'code'=>1,
-            'message'=>'User Created Successfully',
+            'message'=>'first User Created Successfully',
 
         ],Response::HTTP_OK);
 
