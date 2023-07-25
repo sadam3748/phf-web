@@ -76,7 +76,7 @@ class UserProfileController extends Controller
         return response()->json([
             'success'=>true,
             'code'=>1,
-            'message'=>'User profile Created Successfully',
+            'message'=>'change in User profile Created Successfully',
 
         ],Response::HTTP_OK);
 
