@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -15,8 +16,14 @@ class User extends Authenticatable
      *
      * @var array
      */
+    use SoftDeletes;
+//    protected $connection = 'phf';
+    protected $table = 'user';
+
+    protected $primaryKey = 'id';
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'name','email', 'contact_no','pnc_no','password','re_type_password'
     ];
 
     /**

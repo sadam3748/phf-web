@@ -26,9 +26,15 @@ Route::middleware('auth:sanctum')->get('/User', function (Request $request) {
 
 //UserProfileController
 Route::post('user-register',[UserProfileController::class,'user_register']);
-Route::post('add-user-profile',[UserProfileController::class,'user_register']);
-Route::post('add-user-education',[UserProfileController::class,'user_register']);
-Route::post('add-user-experience',[UserProfileController::class,'user_register']);
+Route::post('add-user-profile',[UserProfileController::class,'insert_user_profile']);
+Route::post('add-user-education',[UserProfileController::class,'insert_user_education']);
+Route::post('update-user-education',[UserProfileController::class,'update_user_education']);
+Route::post('delete-user-education',[UserProfileController::class,'delete_user_education']);
+Route::get('get-education-listing',[UserProfileController::class,'education_listing']);
+Route::post('add-user-experience',[UserProfileController::class,'insert_user_experience']);
+Route::post('update-user-experience',[UserProfileController::class,'update_user_experience']);
+Route::post('delete-user-experience',[UserProfileController::class,'delete_user_experience']);
+Route::get('get-experience-listing',[UserProfileController::class,'experience_listing']);
 
 
 Route::post('login',[ApiController::class,'login']);
